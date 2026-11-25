@@ -34,3 +34,7 @@ Las capturas originales permanecen locales y no se publican. Solo se registran a
 | 28 | Desafio 3 | 27_apache_update_complete.png | evidencias/08-desafio-dockerhub/27_apache_update_complete.png | UPDATE_COMPLETE del despliegue Apache | Capturada y revisada |
 | 29 | Desafio 3 | 28_apache_funcionando.png | evidencias/08-desafio-dockerhub/28_apache_funcionando.png | Pagina Apache It works! en navegador | Capturada y revisada |
 | 30 | Desafio 3 | 29_apache_http_200.png | evidencias/08-desafio-dockerhub/29_apache_http_200.png | Respuesta curl HTTP 200 con servidor Apache | Capturada y revisada |
+
+## Limpieza pendiente
+
+Los pasos y desafíos están verificados. No he ejecutado Delete stack: está pendiente la autorización del usuario. Chrome devolvió `cgWindowNotFound` al preparar el procedimiento. No existe ni se registra una captura de eliminación.
