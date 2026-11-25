@@ -1,0 +1,65 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Laboratorio 15 - Amazon Linux 2023 con Docker y Nginx
+Parameters:
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: VPC existente autorizada para el laboratorio
+  SubnetId:
+    Type: AWS::EC2::Subnet::Id
+    Description: Subred publica existente con ruta a Internet
+  InstanceType:
+    Type: String
+    Default: t2.micro
+    AllowedValues: [t2.micro, t3.micro]
+  LatestAmiId:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64
+Resources:
+  WebSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Laboratorio 15 - HTTP publico, sin SSH hasta necesitarlo
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+  WebServer:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref InstanceType
+      ImageId: !Ref LatestAmiId
+      CreditSpecification:
+        CPUCredits: standard
+      NetworkInterfaces:
+        - DeviceIndex: '0'
+          AssociatePublicIpAddress: true
+          DeleteOnTermination: true
+          SubnetId: !Ref SubnetId
+          GroupSet:
+            - !Ref WebSecurityGroup
+      MetadataOptions:
+        HttpTokens: required
+        HttpEndpoint: enabled
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs:
+            VolumeSize: 8
+            VolumeType: gp3
+            Encrypted: true
+            DeleteOnTermination: true
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          set -eux
+          dnf install -y docker
+          systemctl enable --now docker
+          docker run -d --restart unless-stopped --name lab15-web -p 80:80 nginx
+Outputs:
+  InstanceId:
+    Description: ID de la instancia EC2 del laboratorio
+    Value: !Ref WebServer
+  PublicIP:
+    Description: IP publica vigente de la instancia
+    Value: !GetAtt WebServer.PublicIp
