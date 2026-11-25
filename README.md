@@ -37,3 +37,7 @@ He agregado `Name = Laboratorio-Docker` a la instancia y guardado `plantillas/03
 ## Desafío 2 — Key Pair
 
 He incorporado el parámetro `KeyName` y `KeyName: !Ref KeyName`, manteniendo etiquetas y Hello. Creé un par RSA exclusivo `lab15-docker-keypair` e importé únicamente su clave pública en AWS. La clave privada permanece fuera del repositorio, en una carpeta local con permisos 700 y archivo con permisos 600. Seleccioné el par en consola; CloudFormation reemplazó EC2, finalizó con `UPDATE_COMPLETE` y la instancia nueva muestra la asociación real. Consulté los nuevos Outputs y confirmé HTTP 200 con el título Hello World. SSH continúa cerrado.
+
+## Desafío 3 — Apache desde Docker Hub
+
+He desplegado la imagen oficial `httpd` y conservado la versión final en `plantillas/05-httpd.yaml` y `ec2-docker.yaml`. Revisé Add WebServerApache y Remove WebServerHello, manteniendo el Security Group, la etiqueta Name y el Key Pair. Verifiqué `UPDATE_COMPLETE`, los nuevos Outputs, la instancia running con etiquetas y clave, HTTP 200 con cabecera Apache y la página “It works!” en Chrome.

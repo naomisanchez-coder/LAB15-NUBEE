@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Laboratorio 15 - Amazon Linux 2023 con Docker y Nginx Hello
+Description: Laboratorio 15 - Amazon Linux 2023 con Docker y Apache HTTP Server
 Parameters:
   KeyName:
     Type: AWS::EC2::KeyPair::KeyName
@@ -28,7 +28,7 @@ Resources:
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
-  WebServerHello:
+  WebServerApache:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: !Ref InstanceType
@@ -62,11 +62,11 @@ Resources:
           set -eux
           dnf install -y docker
           systemctl enable --now docker
-          docker run -d --restart unless-stopped --name lab15-web -p 80:80 nginxdemos/hello
+          docker run -d --restart unless-stopped --name lab15-web -p 80:80 httpd
 Outputs:
   InstanceId:
     Description: ID de la instancia EC2 del laboratorio
-    Value: !Ref WebServerHello
+    Value: !Ref WebServerApache
   PublicIP:
     Description: IP publica vigente de la instancia
-    Value: !GetAtt WebServerHello.PublicIp
+    Value: !GetAtt WebServerApache.PublicIp

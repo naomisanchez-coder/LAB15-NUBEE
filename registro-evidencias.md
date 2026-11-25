@@ -30,3 +30,7 @@ Las capturas originales permanecen locales y no se publican. Solo se registran a
 | 24 | Desafio 2 | 23_keypair_seleccionado.png | evidencias/07-desafio-keypair/23_keypair_seleccionado.png | Key Pair exclusivo seleccionado en AWS Console | Capturada y revisada |
 | 25 | Desafio 2 | 24_keypair_asociado.png | evidencias/07-desafio-keypair/24_keypair_asociado.png | Asociacion efectiva del Key Pair en instancia EC2 nueva | Capturada y revisada |
 | 26 | Desafio 2 | 25_keypair_update_complete.png | evidencias/07-desafio-keypair/25_keypair_update_complete.png | UPDATE_COMPLETE tras asociar clave | Capturada y revisada |
+| 27 | Desafio 3 | 26_apache_yaml.png | evidencias/08-desafio-dockerhub/26_apache_yaml.png | Plantilla final acumulativa con imagen oficial httpd | Capturada y revisada |
+| 28 | Desafio 3 | 27_apache_update_complete.png | evidencias/08-desafio-dockerhub/27_apache_update_complete.png | UPDATE_COMPLETE del despliegue Apache | Capturada y revisada |
+| 29 | Desafio 3 | 28_apache_funcionando.png | evidencias/08-desafio-dockerhub/28_apache_funcionando.png | Pagina Apache It works! en navegador | Capturada y revisada |
+| 30 | Desafio 3 | 29_apache_http_200.png | evidencias/08-desafio-dockerhub/29_apache_http_200.png | Respuesta curl HTTP 200 con servidor Apache | Capturada y revisada |
