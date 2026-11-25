@@ -23,3 +23,6 @@ Las capturas originales permanecen locales y no se publican. Solo se registran a
 | 17 | 05-actualizacion-stack | 16_cambios_reemplazo.png | evidencias/05-actualizacion-stack/16_cambios_reemplazo.png | Vista previa Add WebServerHello y Remove WebServer | Capturada y revisada |
 | 18 | 05-actualizacion-stack | 17_update_complete.png | evidencias/05-actualizacion-stack/17_update_complete.png | UPDATE_COMPLETE real de hello | Capturada y revisada |
 | 19 | 05-actualizacion-stack | 18_nginx_hello_funcionando.png | evidencias/05-actualizacion-stack/18_nginx_hello_funcionando.png | Aplicacion Hello World con datos del contenedor | Capturada y revisada |
+| 20 | Desafio 1 | 19_tags_yaml.png | evidencias/06-desafio-tags/19_tags_yaml.png | Etiqueta Name exacta en YAML | Capturada y revisada |
+| 21 | Desafio 1 | 20_tags_update_complete.png | evidencias/06-desafio-tags/20_tags_update_complete.png | UPDATE_COMPLETE de etiquetas | Capturada y revisada |
+| 22 | Desafio 1 | 21_tags_ec2.png | evidencias/06-desafio-tags/21_tags_ec2.png | Name = Laboratorio-Docker visible en EC2 | Capturada y revisada |

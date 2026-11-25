@@ -30,6 +30,9 @@ Resources:
     Properties:
       InstanceType: !Ref InstanceType
       ImageId: !Ref LatestAmiId
+      Tags:
+        - Key: Name
+          Value: Laboratorio-Docker
       CreditSpecification:
         CPUCredits: standard
       NetworkInterfaces:

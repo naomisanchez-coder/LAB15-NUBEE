@@ -29,3 +29,7 @@ He abierto la IP vigente en Chrome y comprobado “Welcome to nginx!”. `curl` 
 ## Paso 5 — Actualización a Nginx Hello
 
 He desplegado `nginxdemos/hello` mediante la sustitución controlada de `WebServer` por `WebServerHello`, conservando el stack y el Security Group. Revisé la vista previa Add/Remove en consola y comprobé `UPDATE_COMPLETE`. Volví a consultar Outputs; la IP cambió. `curl` devolvió HTTP 200 y Chrome mostró Hello World con los datos del contenedor. La instancia anterior fue retirada por CloudFormation.
+
+## Desafío 1 — Etiquetas
+
+He agregado `Name = Laboratorio-Docker` a la instancia y guardado `plantillas/03-tags.yaml`. La vista previa indicó Modify con sustitución False. Verifiqué `UPDATE_COMPLETE`, la etiqueta en EC2 y HTTP 200 de Hello sin reemplazar la instancia.
