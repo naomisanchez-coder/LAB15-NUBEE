@@ -25,3 +25,7 @@ He comprobado `CREATE_COMPLETE`, los dos recursos del stack, la instancia `runni
 ## Paso 4 — Nginx verificado
 
 He abierto la IP vigente en Chrome y comprobado “Welcome to nginx!”. `curl` devolvió `HTTP/1.1 200 OK`, con servidor Nginx. La consulta inicial no conectó mientras arrancaba UserData; la siguiente fue exitosa sin cambiar la infraestructura. No he accedido por SSH a esta instancia.
+
+## Paso 5 — Actualización a Nginx Hello
+
+He desplegado `nginxdemos/hello` mediante la sustitución controlada de `WebServer` por `WebServerHello`, conservando el stack y el Security Group. Revisé la vista previa Add/Remove en consola y comprobé `UPDATE_COMPLETE`. Volví a consultar Outputs; la IP cambió. `curl` devolvió HTTP 200 y Chrome mostró Hello World con los datos del contenedor. La instancia anterior fue retirada por CloudFormation.

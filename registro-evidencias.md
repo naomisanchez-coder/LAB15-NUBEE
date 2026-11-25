@@ -18,3 +18,8 @@ Las capturas originales permanecen locales y no se publican. Solo se registran a
 | 12 | Paso 3 | 12_security_group.png | evidencias/03-verificacion-recursos/12_security_group.png | Unica regla de entrada TCP 80; SSH cerrado | Capturada y revisada |
 | 13 | Paso 4 | 13_nginx_funcionando.png | evidencias/04-despliegue-nginx/13_nginx_funcionando.png | Welcome to nginx! en navegador | Capturada y revisada |
 | 14 | Paso 4 | 14_http_200_nginx.png | evidencias/04-despliegue-nginx/14_http_200_nginx.png | Cabeceras reales obtenidas mediante curl: HTTP 200 | Capturada y revisada |
+| 15 | 00-inicializacion | 03_github_main_publicado.png | evidencias/00-inicializacion/03_github_main_publicado.png | Repositorio GitHub en main con cinco commits publicados | Capturada y revisada |
+| 16 | 05-actualizacion-stack | 15_hello_yaml.png | evidencias/05-actualizacion-stack/15_hello_yaml.png | UserData hello e identificador logico nuevo | Capturada y revisada |
+| 17 | 05-actualizacion-stack | 16_cambios_reemplazo.png | evidencias/05-actualizacion-stack/16_cambios_reemplazo.png | Vista previa Add WebServerHello y Remove WebServer | Capturada y revisada |
+| 18 | 05-actualizacion-stack | 17_update_complete.png | evidencias/05-actualizacion-stack/17_update_complete.png | UPDATE_COMPLETE real de hello | Capturada y revisada |
+| 19 | 05-actualizacion-stack | 18_nginx_hello_funcionando.png | evidencias/05-actualizacion-stack/18_nginx_hello_funcionando.png | Aplicacion Hello World con datos del contenedor | Capturada y revisada |
