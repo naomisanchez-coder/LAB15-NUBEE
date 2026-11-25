@@ -1,6 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Laboratorio 15 - Amazon Linux 2023 con Docker y Nginx Hello
 Parameters:
+  KeyName:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: Key Pair exclusivo autorizado para el laboratorio
   VpcId:
     Type: AWS::EC2::VPC::Id
     Description: VPC existente autorizada para el laboratorio
@@ -30,6 +33,7 @@ Resources:
     Properties:
       InstanceType: !Ref InstanceType
       ImageId: !Ref LatestAmiId
+      KeyName: !Ref KeyName
       Tags:
         - Key: Name
           Value: Laboratorio-Docker

@@ -26,3 +26,7 @@ Las capturas originales permanecen locales y no se publican. Solo se registran a
 | 20 | Desafio 1 | 19_tags_yaml.png | evidencias/06-desafio-tags/19_tags_yaml.png | Etiqueta Name exacta en YAML | Capturada y revisada |
 | 21 | Desafio 1 | 20_tags_update_complete.png | evidencias/06-desafio-tags/20_tags_update_complete.png | UPDATE_COMPLETE de etiquetas | Capturada y revisada |
 | 22 | Desafio 1 | 21_tags_ec2.png | evidencias/06-desafio-tags/21_tags_ec2.png | Name = Laboratorio-Docker visible en EC2 | Capturada y revisada |
+| 23 | Desafio 2 | 22_keypair_yaml.png | evidencias/07-desafio-keypair/22_keypair_yaml.png | Parametro KeyName y referencia en la instancia | Capturada y revisada |
+| 24 | Desafio 2 | 23_keypair_seleccionado.png | evidencias/07-desafio-keypair/23_keypair_seleccionado.png | Key Pair exclusivo seleccionado en AWS Console | Capturada y revisada |
+| 25 | Desafio 2 | 24_keypair_asociado.png | evidencias/07-desafio-keypair/24_keypair_asociado.png | Asociacion efectiva del Key Pair en instancia EC2 nueva | Capturada y revisada |
+| 26 | Desafio 2 | 25_keypair_update_complete.png | evidencias/07-desafio-keypair/25_keypair_update_complete.png | UPDATE_COMPLETE tras asociar clave | Capturada y revisada |

@@ -33,3 +33,7 @@ He desplegado `nginxdemos/hello` mediante la sustitución controlada de `WebServ
 ## Desafío 1 — Etiquetas
 
 He agregado `Name = Laboratorio-Docker` a la instancia y guardado `plantillas/03-tags.yaml`. La vista previa indicó Modify con sustitución False. Verifiqué `UPDATE_COMPLETE`, la etiqueta en EC2 y HTTP 200 de Hello sin reemplazar la instancia.
+
+## Desafío 2 — Key Pair
+
+He incorporado el parámetro `KeyName` y `KeyName: !Ref KeyName`, manteniendo etiquetas y Hello. Creé un par RSA exclusivo `lab15-docker-keypair` e importé únicamente su clave pública en AWS. La clave privada permanece fuera del repositorio, en una carpeta local con permisos 700 y archivo con permisos 600. Seleccioné el par en consola; CloudFormation reemplazó EC2, finalizó con `UPDATE_COMPLETE` y la instancia nueva muestra la asociación real. Consulté los nuevos Outputs y confirmé HTTP 200 con el título Hello World. SSH continúa cerrado.
