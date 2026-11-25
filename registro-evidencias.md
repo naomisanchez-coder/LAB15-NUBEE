@@ -16,3 +16,5 @@ Las capturas originales permanecen locales y no se publican. Solo se registran a
 | 10 | Paso 3 | 10_outputs.png | evidencias/03-verificacion-recursos/10_outputs.png | Outputs InstanceId y PublicIP vigentes | Capturada y revisada |
 | 11 | Paso 3 | 11_ec2_running.png | evidencias/03-verificacion-recursos/11_ec2_running.png | EC2 t2.micro en ejecucion con IMDSv2 | Capturada y revisada |
 | 12 | Paso 3 | 12_security_group.png | evidencias/03-verificacion-recursos/12_security_group.png | Unica regla de entrada TCP 80; SSH cerrado | Capturada y revisada |
+| 13 | Paso 4 | 13_nginx_funcionando.png | evidencias/04-despliegue-nginx/13_nginx_funcionando.png | Welcome to nginx! en navegador | Capturada y revisada |
+| 14 | Paso 4 | 14_http_200_nginx.png | evidencias/04-despliegue-nginx/14_http_200_nginx.png | Cabeceras reales obtenidas mediante curl: HTTP 200 | Capturada y revisada |

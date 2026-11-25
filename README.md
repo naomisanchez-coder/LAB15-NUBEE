@@ -21,3 +21,7 @@ He cargado la plantilla y creado `lab-cloudformation-docker` mediante AWS Consol
 ## Paso 3 — Recursos verificados
 
 He comprobado `CREATE_COMPLETE`, los dos recursos del stack, la instancia `running`, los Outputs y la regla HTTP 80. IMDSv2 requiere token. No existe entrada SSH. Los valores reales de cuenta, IP e identificadores se conservan solo en evidencias locales excluidas de Git.
+
+## Paso 4 — Nginx verificado
+
+He abierto la IP vigente en Chrome y comprobado “Welcome to nginx!”. `curl` devolvió `HTTP/1.1 200 OK`, con servidor Nginx. La consulta inicial no conectó mientras arrancaba UserData; la siguiente fue exitosa sin cambiar la infraestructura. No he accedido por SSH a esta instancia.
