@@ -17,3 +17,7 @@ La cuenta no devolvió beneficios EC2 en la consulta Free Tier. El usuario autor
 ## Paso 2 — Creación del stack
 
 He cargado la plantilla y creado `lab-cloudformation-docker` mediante AWS Console en `us-east-1`, con t2.micro y una VPC y subred públicas existentes. Verifiqué `CREATE_IN_PROGRESS` mediante consola y CLI. No he creado una VPC ni un NAT Gateway. Las capturas de carga, parámetros y creación están guardadas localmente.
+
+## Paso 3 — Recursos verificados
+
+He comprobado `CREATE_COMPLETE`, los dos recursos del stack, la instancia `running`, los Outputs y la regla HTTP 80. IMDSv2 requiere token. No existe entrada SSH. Los valores reales de cuenta, IP e identificadores se conservan solo en evidencias locales excluidas de Git.
